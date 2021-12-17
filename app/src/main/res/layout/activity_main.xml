@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/HeaderStyle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/red"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/overwork">
+        </TextView>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/imageView"
+                style="@style/TestStyle"
+                android:layout_width="60dp"
+                android:layout_height="66dp"
+                android:layout_weight="7"
+                android:background="#FF0000"
+                app:srcCompat="@android:drawable/stat_sys_warning"></ImageView>
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/TestStyle"
+                android:layout_width="326dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/f_relax"
+                android:textStyle="italic"></TextView>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                style="@style/TestStyle"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/red"
+                android:text="@string/str_test">
+            </TextView>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                style="@style/TestStyle"
+                android:text="@string/day_birth">
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <Spinner
+                android:id="@+id/birth_date_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
+
+            <Spinner
+                android:id="@+id/birth_month_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
+
+            <Spinner
+                android:id="@+id/birth_year_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".08"
+                android:textColor="@color/black"
+                android:text="@string/gender"
+                android:layout_gravity="center_vertical"
+                android:textSize="12sp">
+            </TextView>
+
+            <Spinner
+                android:id="@+id/gender_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.22"
+                android:textAlignment="center"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
+        </TableRow>
+
+        <TextView
+            style="@style/TestStyle"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/first_point">
+        </TextView>
+
+        <TextView
+            style="@style/TestStyle"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/second_point">
+        </TextView>
+
+        <TableRow>
+
+            <TextView
+                style="@style/TestStyle"
+                android:layout_marginVertical="20dp"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.4"
+                android:text="@string/third_point">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/heart_rate_lie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+
+                    android:maxLength="3"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="SpeakableTextPresentCheck"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+
+        <TextView
+            style="@style/TestStyle"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/fourth_point">
+        </TextView>
+
+        <TextView
+            style="@style/TestStyle"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/five_point">
+        </TextView>
+
+        <TableRow>
+
+            <TextView
+                style="@style/TestStyle"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="20dp"
+                android:layout_weight="0.4"
+                android:text="@string/six_point">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_weight="0.5">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/heart_rate_stand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textSize="12sp"
+                    tools:ignore="SpeakableTextPresentCheck"></com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </TableRow>
+
+        <TextView
+            style="@style/TestStyle"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finish_test_tv">
+        </TextView>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/results_button"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_weight="3"
+                android:onClick="ShowResults"
+                android:text="@string/input_text"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:strokeColor="@color/purple_500"
+                tools:ignore="UsingOnClickInXml"></Button>
+
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
