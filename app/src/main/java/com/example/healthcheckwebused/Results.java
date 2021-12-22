@@ -1,4 +1,4 @@
-package com.example.health_test_update_version;
+package com.example.healthcheckwebused;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -47,7 +47,6 @@ public class Results extends AppCompatActivity {
         String first_value = intent.getStringExtra("first_value");
         String second_value = intent.getStringExtra("second_value");
 
-        // Начинаем формирование строковой даты для POST запроса
         String data = String.format("day=15&month=12&year=1990&sex=1&m1=%s&m2=%s",
                 first_value, second_value);
 
@@ -81,9 +80,6 @@ public class Results extends AppCompatActivity {
                 .addHeader("Content-Length", "43")
                 .build();
 
-        // Поток отправки запроса и обработки ответа (обновляет tv при получении ответа 200)
-        // Далее создаём callback (метод обратного вызова) каждый раз, когда отправляем форму через ВВОД
-
         client.newCall(request).enqueue(new Callback() {
 
             @Override
@@ -93,12 +89,8 @@ public class Results extends AppCompatActivity {
 
                     String message = response.body().string();
 
-                    // Парсим html body из ответа
-
                     Document html_response = Jsoup.parse(message);
                     String format_message = html_response.text();
-
-                    // Обновляем интерфейс при получении успешного ответа
 
                     runOnUiThread(new Runnable() {
 
